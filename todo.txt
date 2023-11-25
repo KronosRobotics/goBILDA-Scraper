@@ -1,0 +1,17 @@
+Error in scraping https://www.gobilda.com/stainless-steel-round-shafting-12mm-diameter/: 
+TimeoutError: Waiting for selector `.productView-title` failed: Waiting failed: 5000ms exceeded
+Skipping: ScrapedInfo is null https://www.gobilda.com/stainless-steel-round-shafting-12mm-diameter/
+Page loaded:  ../files/MOTION/Shafting_&_Tubing/Stainless_Steel_Round_Shafting undefined
+Error in scraping https://www.gobilda.com/stainless-steel-d-shafting-6mm-diameter/: 
+TimeoutError: Waiting for selector `.productView-title` failed: Waiting failed: 5000ms exceeded
+Skipping: ScrapedInfo is null https://www.gobilda.com/stainless-steel-d-shafting-6mm-diameter/
+Page loaded:  ../files/MOTION/Shafting_&_Tubing/Stainless_Steel_D-Shafting undefined
+Error in scraping https://www.gobilda.com/2106-series-8mm-rex-stainless-steel-shafting/: 
+TimeoutError: Waiting for selector `.productView-title` failed: Waiting failed: 5000ms exceeded
+Skipping: ScrapedInfo is null https://www.gobilda.com/2106-series-8mm-rex-stainless-steel-shafting/
+Page loaded:  ../files/MOTION/Shafting_&_Tubing/Stainless_Steel_REX™_Shafting undefined
+Error in scraping https://www.gobilda.com/stainless-steel-rex-shafting-12mm-diameter/: 
+TimeoutError: Waiting for selector `.productView-title` failed: Waiting failed: 5000ms exceeded
+Skipping: ScrapedInfo is null https://www.gobilda.com/stainless-steel-rex-shafting-12mm-diameter/
+
+Litearlly all the shafting just got skipped...

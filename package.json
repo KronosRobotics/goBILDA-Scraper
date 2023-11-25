@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "build": "tsc --watch"
+  },
+  "type": "module",
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "axios": "^1.6.2",
+    "cheerio": "^1.0.0-rc.12",
+    "fs-extra": "^11.1.1",
+    "node-fetch": "^3.3.2",
+    "puppeteer-core": "^21.5.1"
+  },
+  "devDependencies": {
+    "@types/adm-zip": "^0.5.4",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.9.2",
+    "@types/unzip": "^0.1.4",
+    "typescript": "^5.2.2"
+  }
+}
