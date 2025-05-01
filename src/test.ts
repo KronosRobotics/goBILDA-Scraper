@@ -1,5 +1,5 @@
 import puppeteer, { Browser, Page } from "puppeteer-core";
-import { scrapePage } from "./helper.js";
+import { scrapePage, getLinks, tableManager } from "./helper.js";
 
 // Declare IIFE function
 (async () => {
@@ -13,7 +13,7 @@ import { scrapePage } from "./helper.js";
 
   // Launch the browser and open a new blank page
   browser = await puppeteer.launch({
-    headless: true,
+    headless: false,
     executablePath: chromePath,
   });
   page = await browser.newPage();
@@ -22,13 +22,13 @@ import { scrapePage } from "./helper.js";
   await page.setViewport({ width: 1280, height: 800 });
 
   // Set the timeout (optimization)
-  await page.setDefaultTimeout(5 * 1000);
+  await page.setDefaultTimeout(10 * 1000);
 
   // More speed optimization
   await page.setRequestInterception(true);
   page.on("request", (req) => {
     if (
-      req.resourceType() === "stylesheet" ||
+      // req.resourceType() === "stylesheet" ||
       req.resourceType() === "font" ||
       req.resourceType() === "image"
     ) {
@@ -38,11 +38,28 @@ import { scrapePage } from "./helper.js";
     }
   });
 
-  const output = await scrapePage(
-    "https://www.gobilda.com/3412-series-5mm-htd-pitch-timing-belt-9mm-width-295mm-pitch-length-59-tooth/",
-    page,
-    "./"
+  // const output = await scrapePage(
+  //   "https://www.gobilda.com/3412-series-5mm-htd-pitch-timing-belt-9mm-width-295mm-pitch-length-59-tooth/",
+  //   page,
+  //   "./"
+  // );
+
+  const output1 = await getLinks(
+    "https://www.gobilda.com/stainless-steel-rex-shafting/",
+    "https://www.gobilda.com/stainless-steel-rex-shafting/",
+    page
   );
 
-  // console.log(output);
+  // console.log(output1);
+
+  // const output2 = await getLinks(
+  //   "https://www.gobilda.com/baseplates/",
+  //   "https://www.gobilda.com/baseplates/",
+  //   page
+  // );
+
+  // console.log("output2: ", output2);
+
+  // const tableOutput = await tableManager();
+  // console.log(tableOutput);
 })();
